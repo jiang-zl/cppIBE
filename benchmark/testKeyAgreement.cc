@@ -29,8 +29,12 @@ int main() {
     Client Alice("Alice@qq.com");
     Client Jzl("martin.zl.jiang@foxmail.com");
 
+    // Client Adv("adv@qq.com");
+
     Alice.initKAClient(pkgServer);
     Jzl.initKAClient(pkgServer);
+
+    // Adv.initKAClient(pkgServer);
 
     for (int i = 1; i <= round; ++i) {
         std::string plain = std::to_string(u(e));
@@ -46,6 +50,16 @@ int main() {
         if (element_cmp(Alice.SK, Jzl.SK)) {
             std::cout << "Error: Key Agreement failed." << std::endl;
         }
+
+        /*
+            test the Middle-Man Attack
+        */
+        // ibe.keyAgreement(Alice, Adv, pkgServer);
+        // ibe.keyAgreement(Adv, Jzl, pkgServer);
+
+        // if (!element_cmp(Alice.SK, Adv.SK) && !element_cmp(Adv.SK, Jzl.SK)) {
+        //     std::cout << "Warning: Middle-Man Attack can be launched." << std::endl;
+        // }
     }
 
     std::cout << "=========================KA TEST PASS=========================" << std::endl;
