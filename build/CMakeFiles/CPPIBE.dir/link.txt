@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/CPPIBE.dir/benchmark/testEncryption.cc.o CMakeFiles/CPPIBE.dir/benchmark/testKeyAgreement.cc.o CMakeFiles/CPPIBE.dir/benchmark/testSignature.cc.o CMakeFiles/CPPIBE.dir/src/Client.cc.o CMakeFiles/CPPIBE.dir/src/IBE.cc.o CMakeFiles/CPPIBE.dir/src/PKGServer.cc.o  -o ../bin/CPPIBE  -lm -lgmp -lpbc -lpthread 
